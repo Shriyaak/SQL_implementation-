@@ -1,10 +1,10 @@
 COMMANDS : 
 #create a database 
 create database database_name; 
-
+------------------------------------------------------------------------------------------------------------------------
 #delete a database 
 drop database database_name; 
-
+------------------------------------------------------------------------------------------------------------------------
 #create a table
 create table table_name( 
 column1 datatype_column1 table_constraint1,    #table_constraint1 : NOT NULL /AUTO INCREMENT
@@ -12,3 +12,43 @@ column2 datatype_column2 table_constarint1,
 column2 datatype_column2 table_constarint1,
 column2 datatype_column2 table_constarint1,
 table_constraints2 ( ) );                       #table_constraint2 : PRIMARY KEY / FOREIGN KEY / UNIQUE 
+------------------------------------------------------------------------------------------------------------------------
+#delete a table
+drop table table_name; 
+-----------------------------------------------------------------------------------------------------------------------
+# SELECT query 
+CASE 1:  select column1, column2, ... from table_name;  #selects columns specified from the table 
+CASE 2:  select * from tebla_name   # selects all columns from the table 
+------------------------------------------------------------------------------------------------------------------------
+# WHERE clause  --- used to filter records (extrct only those resords that fulfill the specified condition) 
+SELECT column_name 
+FROM table_name 
+WHERE condition = True; 
+
+Eg : SELECT first_name 
+     FROM Student 
+     WHERE city = 'Pune'; 
+------------------------------------------------------------------------------------------------------------------------
+#AND, OR, NOT Statements    ---- if we need to add two or more conditions in the where clause then we can use these operators 
+
+#AND 
+SELECT column_name 
+FROM table_name 
+WHERE condition1 = TRUE AND condition2 = TRUE ;
+
+#OR 
+SELECT column_name 
+FROM table_name 
+WHERE condition1 = True or condition2 = False; /( WHERE condition1 = False or condition2 = True;)/ (WHERE condition1 = True or condition2 = True;) 
+
+#NOT 
+SELECT column_name 
+FROM table_name 
+WHERE NOT condition = True;    #gives the output where condition is not true 
+-----------------------------------------------------------------------------------------------------------------------
+#INSERT INTO 
+INSERT INTO table_name ( column1, column2 ...) 
+VALUES ( int , 'varchar(20)' , 'varchar(50)', 'text'), 
+( int , 'varchar(20)' , 'varchar(50)', 'text'),
+( int , 'varchar(20)' , 'varchar(50)', 'text'); 
+
