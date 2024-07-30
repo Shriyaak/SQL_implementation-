@@ -1,0 +1,25 @@
+- SQL,structured Query Language can be used only for relational type databases 
+- relational database is a database which has a tabular method of storing data, usually contains of rows and columns 
+
+Different subsets of SQL commands:  
+1. Data Query Language(DQL) 
+Purpose: retrieve data from database 
+Key Commands: SELECT, JOIN, WHERE, GROUP BY, ORDER BY, HAVING.
+
+2. Data Definition Language(DDL) 
+Purpose: used to create and modify the structure of database objects in the database, deals with database schema) 
+Key Commands: CREATE, ALTER, DROP, TRUNCATE, RENAME
+
+3. Data Control Language(DCL) 
+Purpose: concerned with controls and permissions to access the database system. 
+Key Commands: GRANT, REVOKE
+
+4.Data Manipulation Language(DML) 
+Purpose: allows you to manage data within the schema object 
+Key Commands: INSERT, UPDATE, DELETE
+
+5. Transaction Control Language(TCL) 
+Purpose: Manage transactions in the database
+Key Commands: COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION 
+
+
