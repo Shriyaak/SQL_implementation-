@@ -104,6 +104,62 @@ VALUES ( int , 'varchar(20)' , 'varchar(50)', 'text'),
 ( int , 'varchar(20)' , 'varchar(50)', 'text'); 
 ---------------------------------------------------------------------------------------------------------------------------------
 # UPDATE -- used to modify rows in a table                                                                           {UPDATE = DML}
+syntax: 
+update table_name 
+set column1 = value1 , 
+column2 = value 2.... 
+where condition ; 
+--------------------------------------------------------------------------------------------------------------------------------------
+#DELETE -- used to delete rows that are no longer required from the table                                          {DELETE = DML}
+syntax: 
+DELETE FROM table_name 
+WHERE condition; 
+-------------------------------------------------------------------------------------------------------------------------------------
+#used for filtering data based on specified conditions in the WHERE clause 
+
+#IN operator -- used to specify multiple values inside the where clause 
+syntax : 
+select col_name 
+from table_name 
+where col_name is in (value1, value2, ...); 
+
+#BETWEEN -- will select a particular value within the specified range, 
+eg; select pizza_type_id , price 
+from pizzas
+where price between 15 and 20; 
+----------------------------------------------------------------------------------------------------------------------------------
+#ALLIASES IN SQL - giving a table or a column a temporary name do that it helps when the query is complex 
+syntax : 
+select col_name AS alias_name              #column aliasing 
+from table_name 
+where col_name is null
+
+syntax : 
+select col_name 
+from table_name AS alias_name                  #table aliasing 
+where col_name is null
+-----------------------------------------------------------------------------------------------------------------------------------
+Operators
+
+1. In (used with where, for multiple values)   
+eg: 
+select first_name, dep from employee
+where job_id in ('j1','j2')
+output: first name | dep 
+        Smith      | 10 
+
+
+2. Comparison operators >,<,=,>=,<=
+eg: 
+select first_name,dept,salary from employee where salary > 1000; 
+output: 
+first_name | dept | salary 
+Smith      | 10   | 2000 
+Arun       | 30   | 5000 
+Saket      | 50   | £9999999999999999999999999999999999999999999 PS 
+
+
+
 
 
 
