@@ -1,3 +1,4 @@
+
 SQL VIDEO LINK: https://www.youtube.com/live/q_JsgpiuY98?si=9SSLAsunaqAAAACW
 
 SQL FACTS: 
@@ -5,7 +6,8 @@ SQL FACTS:
 - relational database is a database which has a tabular method of storing data, usually contains of rows and columns 
 - SQL ia a declarative language 
 
-Different subsets of SQL commands:  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DIFFERENT SUBSETS OF SQL COMMANDS :  
 1. Data Query Language(DQL) 
 Purpose: retrieve data from database 
 Key Commands: SELECT, JOIN, WHERE, GROUP BY, ORDER BY, HAVING.
@@ -25,6 +27,43 @@ Key Commands: INSERT, UPDATE, DELETE
 5. Transaction Control Language(TCL) 
 Purpose: Manage transactions in the database
 Key Commands: COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TYPES OF DATABASES : 
+1. distributed database 
+2. object oriented database 
+3. centralized database 
+4. operational database 
+5. graph database 
+6. cloud database 
+7. NoSql database 
+8. Relational database 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TERMINOLOGY :  
+tuples : A TUPLE ia a single row in a table which contains a single record for that relation.
+attributes : columns/features ( required: column names, datatype ) 
+entity : table name 
+table constraints : restrictions that are specified by the user while creating a table (NOT NULL, CHECK DEFAULT, PRIMARY KEY, FOREIGN KEY, UNIQUE, INDEX) 
+#these constraints have to be decided during the creation of a table if we want to change the constraints then we have to delete the table, create a new table and update the new constarints) 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+STRUCTURE : 
+DATABASE1: 
+ table1: (table/entity) 
+ table1.attribute1 | table1.attribute2 ......  | table1.attributeN   (attribute/feature/column) 
+ table2: 
+ table2.attribute1 | table2.attribute2 ......  | table2.attributeN 
+ table3 : 
+ table3.attribute1 | table3.attribute2 ......  | table3.attributeN 
+.
+.
+.
+tableM: 
+tableM.attribute1 | tableM.attribute2 ......  | tableM.attributeN 
+
+
+
+
+ 
+
 
 
 
