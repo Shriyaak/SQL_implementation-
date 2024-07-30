@@ -1,3 +1,4 @@
+
 COMMANDS : 
 #create a database   {CREATE = DDL} 
 create database database_name; 
@@ -51,4 +52,10 @@ INSERT INTO table_name ( column1, column2 ...)
 VALUES ( int , 'varchar(20)' , 'varchar(50)', 'text'), 
 ( int , 'varchar(20)' , 'varchar(50)', 'text'),
 ( int , 'varchar(20)' , 'varchar(50)', 'text'); 
+
+---------------------------------------------------------------------------------------------------------------------------
+#AGGREGATE FUNCTIONS --- COUNT, SUM, AVERAGE, MINIMUM, MAXIMUM                                           {typically associated with DQL} 
+
+
+
 
