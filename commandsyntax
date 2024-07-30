@@ -1,0 +1,14 @@
+COMMANDS : 
+#create a database 
+create database database_name; 
+
+#delete a database 
+drop database database_name; 
+
+#create a table
+create table table_name( 
+column1 datatype_column1 table_constraint1,    #table_constraint1 : NOT NULL /AUTO INCREMENT
+column2 datatype_column2 table_constarint1,
+column2 datatype_column2 table_constarint1,
+column2 datatype_column2 table_constarint1,
+table_constraints2 ( ) );                       #table_constraint2 : PRIMARY KEY / FOREIGN KEY / UNIQUE 
