@@ -56,6 +56,24 @@ VALUES ( int , 'varchar(20)' , 'varchar(50)', 'text'),
 ---------------------------------------------------------------------------------------------------------------------------
 #AGGREGATE FUNCTIONS --- COUNT, SUM, AVERAGE, MINIMUM, MAXIMUM                                           {typically associated with DQL} 
 
+COUNT - returns the number of rows that specify the criteria.  
+SELECT COUNT(column_name) FROM table_name WHERE condition = TRUE; / SELECT COUNT(column_name) FROM table_name; 
+
+AVG - returns the average value of numeric column 
+eg:  SELECT AVG(price) FROM pizzas; 
+
+SUM - returns the total sum of that particular column  #if applied on a non numeric col returns 0 
+
+MIN - returns the minimum value from the selected column 
+
+MAX - returns the largest value from the selected column 
+---------------------------------------------------------------------------------------------------------------------------
+# GROUP BY --- used to arrange a similar type of functionality of data into a group                                {GROUP BY = DQL} 
+
+
+
+
+
 
 
 
