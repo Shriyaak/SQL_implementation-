@@ -1,11 +1,11 @@
 
 COMMANDS : 
-#create a database   {CREATE = DDL} 
+#create a database  
 create database database_name; 
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 #delete a database                                                                                           {DROP = DDL}
 drop database database_name; 
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 #create a table                                                                                             {CREATE = DDL}
 create table table_name( 
 column1 datatype_column1 table_constraint1,    #table_constraint1 : NOT NULL /AUTO INCREMENT
@@ -13,14 +13,14 @@ column2 datatype_column2 table_constarint1,
 column2 datatype_column2 table_constarint1,
 column2 datatype_column2 table_constarint1,
 table_constraints2 ( ) );                       #table_constraint2 : PRIMARY KEY / FOREIGN KEY / UNIQUE 
-------------------------------------------------------------------------------------------------------------------------
-#delete a table    {DROP = DDL}
+--------------------------------------------------------------------------------------------------------------------------------------
+#delete a table                                                                                             
 drop table table_name; 
------------------------------------------------------------------------------------------------------------------------
-# SELECT query    {SELECT = DQL} 
+--------------------------------------------------------------------------------------------------------------------------------------
+# SELECT query                                                                                               {SELECT = DQL} 
 CASE 1:  select column1, column2, ... from table_name;  #selects columns specified from the table 
 CASE 2:  select * from tebla_name   # selects all columns from the table 
-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
 # WHERE clause  --- used to filter records (extrct only those resords that fulfill the specified condition)  {WHERE = DQL}
 SELECT column_name  
 FROM table_name                                                                                               {FROM = DQL}
@@ -29,7 +29,7 @@ WHERE condition = True;
 Eg : SELECT first_name 
      FROM Student 
      WHERE city = 'Pune'; 
-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
 #AND, OR, NOT Statements    ---- if we need to add two or more conditions in the where clause then we can use these operators 
 
 #AND 
@@ -46,14 +46,7 @@ WHERE condition1 = True or condition2 = False; /( WHERE condition1 = False or co
 SELECT column_name 
 FROM table_name 
 WHERE NOT condition = True;    #gives the output where condition is not true 
------------------------------------------------------------------------------------------------------------------------
-#INSERT INTO                                                                                              {INSERT INTO = DML}
-INSERT INTO table_name ( column1, column2 ...) 
-VALUES ( int , 'varchar(20)' , 'varchar(50)', 'text'), 
-( int , 'varchar(20)' , 'varchar(50)', 'text'),
-( int , 'varchar(20)' , 'varchar(50)', 'text'); 
-
----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 #AGGREGATE FUNCTIONS --- COUNT, SUM, AVERAGE, MINIMUM, MAXIMUM                                           {typically associated with DQL} 
 
 COUNT - returns the number of rows that specify the criteria.  
@@ -67,8 +60,59 @@ SUM - returns the total sum of that particular column  #if applied on a non nume
 MIN - returns the minimum value from the selected column 
 
 MAX - returns the largest value from the selected column 
----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 # GROUP BY --- used to arrange a similar type of functionality of data into a group                                {GROUP BY = DQL} 
+#you need a aggregate function to be inserted for the group by to work 
+syntax:  
+select column_name(s) 
+from table_name 
+where condition 
+group by column name;
+
+#HAVING -- used to place condition where we need to decide which group will be the part of final result-set        {HAVING = DQL}
+~ where clause cound not be used with aggregate function so having is used. 
+syntax: 
+select column_name(s) 
+from table_name 
+where condition 
+group by column name(s)
+having condition;
+
+eg: select  pizza_type_id , price from pizzas 
+having price >20; 
+
+#ORDER BY -- used to sort the results in ascending or descending order                                             {ORDER BY = DQL} 
+# DESC --> DESCENDING , asc --> ASCENDING 
+eg: select pizza_id , sum(price) 
+from pizzas 
+order by sum(price) desc; 
+# you dont need the aggregate function for order by you can use it on a non numeric column as well 
+----------------------------------------------------------------------------------------------------------------------------------
+#NULL VALUES(field with no value) - null does not mean the value is 0 
+IS NULL - operator is used to test the empty values 
+syntax : 
+select col_name 
+from table_name 
+where col_name is null; 
+
+IS NOT NULL - returns item that have not null values 
+----------------------------------------------------------------------------------------------------------------------------------
+#INSERT INTO                                                                                                     {INSERT INTO = DML}
+INSERT INTO table_name ( column1, column2 ...) 
+VALUES ( int , 'varchar(20)' , 'varchar(50)', 'text'), 
+( int , 'varchar(20)' , 'varchar(50)', 'text'),
+( int , 'varchar(20)' , 'varchar(50)', 'text'); 
+---------------------------------------------------------------------------------------------------------------------------------
+# UPDATE -- used to modify rows in a table                                                                           {UPDATE = DML}
+
+
+
+
+
+
+
+
+
 
 
 
