@@ -158,6 +158,27 @@ Smith      | 10   | 2000
 Arun       | 30   | 5000 
 Saket      | 50   | £9999999999999999999999999999999999999999999 PS 
 
+3. LIKE 
+-- search condition can contain either character or numbers 
+-- % denotes zero or more characters 
+-- _ denotes one character 
+SQL > select dept_name,loc from dept where loc like 'c%' ;   #(starts wit c%  for ends with c it will be %c) 
+SQL > select dept_name, loc from dept where loc like 'chen_ _ _ ' ; 
+
+
+4. CASE expression (if then else) 
+SELECT CASE (column_name) 
+WHEN condition1 then result1 
+WHEN cndition2 then result2 
+ELSE result 
+END 
+FROM table_name 
+
+# '=' operator does not work with NULL , If you want to check for null use IS NULL or IS NOT NULL 
+
+
+
+
 
 
 
